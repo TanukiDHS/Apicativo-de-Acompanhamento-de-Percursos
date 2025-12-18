@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/tvTituloPercuso"
+            android:text="Percurso ID"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPercursoInicio"
+            android:text="Inicio: tempo"
+            android:textStyle="bold"
+            android:layout_marginEnd="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloPercuso"
+            app:layout_constraintStart_toStartOf="@+id/tvTituloPercuso"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTituloPercuso"
+            app:layout_constraintEnd_toStartOf="@+id/tvPercursoFim"
+            />
+
+        <TextView
+            android:id="@+id/tvPercursoFim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Finalização: tempo"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloPercuso"
+            app:layout_constraintEnd_toEndOf="@+id/tvTituloPercuso"
+            app:layout_constraintStart_toEndOf="@id/tvPercursoInicio"
+            app:layout_constraintBottom_toBottomOf="@id/tvTituloPercuso" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

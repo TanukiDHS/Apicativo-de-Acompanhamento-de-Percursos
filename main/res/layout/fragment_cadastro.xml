@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.CadastroFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCadastroNome"
+        android:text="@string/nome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="130dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCadastroNome"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroNome"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCadastroSenha"
+        android:text="@string/senha"
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroNome"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCadastroSenha"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroSenha"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCadastroRepetir"
+        android:text="@string/repetirSenha"
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroSenha"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCadastroRepetir"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroRepetir"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCadastroEmail"
+        android:text="@string/email"
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroRepetir"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCadastroEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bCadastroCadastrar"
+        android:text="@string/cadastar"
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/voltar"
+        android:id="@+id/bCadastroVoltar"
+        app:layout_constraintTop_toBottomOf="@+id/bCadastroCadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.aap.view.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/acao_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/acao_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.aap.view.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/acao_mainFragment_to_mapaFragment"
+            app:destination="@id/mapaFragment" />
+        <action
+            android:id="@+id/acao_mainFragment_to_listaPercursosFragment"
+            app:destination="@id/listaPercursosFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_visualizaAcompanhamentoFragment"
+            app:destination="@id/visualizaAcompanhamentoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.aap.view.fragments.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" />
+    <fragment
+        android:id="@+id/mapaFragment"
+        android:name="com.example.aap.view.fragments.MapaFragment"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" />
+    <fragment
+        android:id="@+id/listaPercursosFragment"
+        android:name="com.example.aap.view.fragments.ListaPercursosFragment"
+        android:label="fragment_lista_percursos"
+        tools:layout="@layout/fragment_lista_percursos" >
+        <action
+            android:id="@+id/acao_listaPercursosFragment_to_visualizaPercursoFragment"
+            app:destination="@id/visualizaPercursoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meusDadosFragment"
+        android:name="com.example.aap.view.fragments.MeusDadosFragment"
+        android:label="fragment_meus_dados"
+        tools:layout="@layout/fragment_meus_dados" />
+    <action
+        android:id="@+id/action_global_meusDadosFragment"
+        app:destination="@id/meusDadosFragment" />
+    <fragment
+        android:id="@+id/visualizaPercursoFragment"
+        android:name="com.example.aap.view.fragments.VisualizaPercursoFragment"
+        android:label="fragment_visualiza_percurso"
+        tools:layout="@layout/fragment_visualiza_percurso" />
+    <fragment
+        android:id="@+id/visualizaAcompanhamentoFragment"
+        android:name="com.example.aap.view.fragments.VisualizaAcompanhamentoFragment"
+        android:label="fragment_visualiza_acompanhamento"
+        tools:layout="@layout/fragment_visualiza_acompanhamento" />
+</navigation>
